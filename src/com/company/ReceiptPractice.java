@@ -1,6 +1,6 @@
 package com.company;
 
-public class VariablePractice {
+public class ReceiptPractice {
     public static void main (String[] args){
         int subtotal= 38+40+30;
         double tax = subtotal * .08;
