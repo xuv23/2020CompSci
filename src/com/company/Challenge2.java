@@ -1,6 +1,6 @@
 package com.company;
 public class Challenge2 {
-public static final int SIZE=-3; // Declaring a global constant
+public static final int SIZE=5; // Declaring a global constant
     public static void main(String[] args) {
         Line();
         Top();
