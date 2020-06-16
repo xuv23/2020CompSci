@@ -14,7 +14,7 @@ package com.company;
 //        Create integer called sumInt which equals to i+int1
 //        Create double called sumDoub which equals to d+doub1
 //        Create string called sumStr which equals to s+str1
-//        Use Printf to print “sumStr”,  “sumDoub”,  “sumInt” and format it so that “sumDoub” only has one decimal place and that after each variable is printed, it returns to a new line ("%d\n%.1f\n%s\n").
+//        Use Printf to print “sumStr”,  “sumDoub”,  “sumInt” and format it so that “sumDoub” only has one decimal place and that after each variable is printed, it returns to a new line ("%d\n for SumInt  %.1f\n for sumDoub  %s\n" for sumStr).
 import java.util.*;
 public class DataTypeChallenge {
     public static void main (String args[]){
