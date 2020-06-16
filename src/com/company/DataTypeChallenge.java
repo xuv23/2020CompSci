@@ -1,4 +1,20 @@
 package com.company;
+//        Valerie Xu
+//        Create main function
+//        Create integer called i and initialize it to 4
+//        Create double called d and set it to 4.0
+//        Create string called s which says “Greenhill”
+//        Import Scanner
+//        Print line that says “Enter an integer: “
+//        Create integer called int1 that is equal to the next input value
+//        Print line that says “Enter a double: “
+//        Create integer called doub1 that is equal to the next input value
+//        Print line that says “Enter a string: “
+//        Create integer called str1 that is equal to the next input value
+//        Create integer called sumInt which equals to i+int1
+//        Create double called sumDoub which equals to d+doub1
+//        Create string called sumStr which equals to s+str1
+//        Use Printf to print “sumStr”,  “sumDoub”,  “sumInt” and format it so that “sumDoub” only has one decimal place ("%d\n%.1f\n%s\n").
 import java.util.*;
 public class DataTypeChallenge {
     public static void main (String args[]){
