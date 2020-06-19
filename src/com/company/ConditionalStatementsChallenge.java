@@ -8,6 +8,7 @@
 //              Print a line that says "Do you want to play the game(Y or N): "
 //              initialize string "play" again to the next input value
 //      end while loop
+//      Print a line that says "Have a great day!"
 //Create a function called "playGame"
 //      print a line that says "Please type number between 1 and 137: "
 //      create an integer called "n" and initialize it so that it is equaled to the next input value
