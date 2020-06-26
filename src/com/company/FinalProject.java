@@ -52,43 +52,43 @@ import java.io.FileWriter;
 import java.io.IOException;
 public class FinalProject {
 
-    public static String input_file_name = "c:/temp/info.txt";
+    public static String input_file_name = "c:/temp/info.txt";// the file
 
     public static void main(String[] args) throws IOException {
         Scanner input = new Scanner(System.in);
         Welcome();
         System.out.print("Do you want to play (Y or N): ");
         String play = input.next();
-        int score = 0;
-        int roundNum = 0;
+        int score = 0;// initialize score
+        int roundNum = 0;// initialize round#
         int[] scoreRound = {score, roundNum};
         while (play.toUpperCase().equals("Y")) {
             System.out.print("Do you want to guess a type of food (F) or a number (N):");
             String wordType = input.next();
-            if (wordType.toUpperCase().equals("F")) {
+            if (wordType.toUpperCase().equals("F")) {// user input equals f (K insensitive)
                 System.out.print("Type a food you want to guess:");
                 String answer = input.next();
-                scoreRound = Reader(answer, scoreRound);
+                scoreRound = Reader(answer, scoreRound);// call return method to set score and round number
                 System.out.println("Score: " + scoreRound[0] + "\nRounds: " + scoreRound[1]);
                 System.out.print("Do you want to play again(Y or N): ");
                 play = input.next();
             } else if (wordType.toUpperCase().equals("N")) {
                 System.out.print("Type a number between 1-50 inclusive that you want to guess (both decimals and integers work): ");
                 String answer2 = input.next();
-                double num = Double.parseDouble(answer2);
-                while (num < 1 || num > 50) {
+                double num = Double.parseDouble(answer2);// converts String to Double
+                while (num < 1 || num > 50) {// if number not btw 1-50
                     System.out.println("You can only guess numbers between 1-50 inclusive (both decimals and integers work)");
                     System.out.print("Guess another number here: ");
                     answer2 = input.next();
                     num = Double.parseDouble(answer2);
                 }
-                scoreRound = Reader(answer2, scoreRound);
+                scoreRound = Reader(answer2, scoreRound);// call return function to set score and round number
                 System.out.println("Score: " + scoreRound[0] + "\nRounds: " + scoreRound[1]);
-                System.out.print("Do you want to play again(Y or N): ");
+                System.out.print("Do you want to play again(Y or N): ");// ask user if they want to play again
                 play = input.next();
             } else {
-                System.out.println("You can only choose between a number and a word");
-                System.out.print("Do you want to play again(Y or N): ");
+                System.out.println("You can only choose between a number and a food");
+                System.out.print("Do you want to play (Y or N): ");
                 play = input.next();
             }
         }
@@ -99,21 +99,21 @@ public class FinalProject {
         FileReader readF = new FileReader(input_file_name);
         Scanner myScanner = new Scanner(readF);
         int [] initial= scoreRound;
-        while (myScanner.hasNext()) {
+        while (myScanner.hasNext()) {// file not finished
             String token = myScanner.next();
-            if (token.toUpperCase().equals(answer.toUpperCase())) {
-                scoreRound[0] = scoreRound[0] + 1;
-                scoreRound[1] = scoreRound[1] + 1;
+            if (token.toUpperCase().equals(answer.toUpperCase())) {// if next token equals input value (K insensitive)
+                scoreRound[0] = scoreRound[0] + 1;// add 1 point
+                scoreRound[1] = scoreRound[1] + 1;// add 1 to round count
                 System.out.println("Guess is correct!");
                 return scoreRound;
             }
         }
-        System.out.println("Guess is incorrect!");
+        System.out.println("Guess is incorrect!");// if input value not found in file
         scoreRound[1] = scoreRound[1] + 1;
         return scoreRound;
     }
 
-    public static void Welcome() {
+    public static void Welcome() {// welcome sign with instructions
         System.out.println("*----------------------------------------*");
         System.out.println("|                                        |");
         System.out.println("|      Welcome to our guessing game!     |");
@@ -127,7 +127,7 @@ public class FinalProject {
         System.out.println("|You can play as many times as you want  |");
         System.out.println("*----------------------------------------*");
     }
-    public static void Close(int scoreRound[]){
+    public static void Close(int scoreRound[]){// closing sign with displayed final score and round count
         String space=" ";
         System.out.println("*----------------------------------------*");
         System.out.println("| Thanks for playing                     |");
@@ -137,5 +137,3 @@ public class FinalProject {
         System.out.println("*----------------------------------------*");
     }
 }
-
-
