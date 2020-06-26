@@ -130,7 +130,7 @@ public class FinalProject {
     public static void Close(int scoreRound[]){// closing sign with displayed final score and round count
         String space=" ";
         System.out.println("*----------------------------------------*");
-        System.out.println("| Thanks for playing                     |");
+        System.out.println("|Thanks for playing                      |");
         System.out.printf("|Final Score #:%2d%4s                    |\n", scoreRound[0], space);
         System.out.printf("|Final Round #:%2d%4s                    |\n", scoreRound[1],space);
         System.out.println("|Bye!                                    |");
